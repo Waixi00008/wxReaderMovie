@@ -1,0 +1,49 @@
+<view class="page">
+  <view class="page_hd">
+    <text class="page_title">form</text>
+    <view class="hr"></view>
+  </view>
+
+  <form class="page_bd" bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section section_gap">
+      <view class="section__title">switch</view>
+      <switch name="switch" />
+    </view>
+    <view class="section section_gap">
+      <view class="section__title">slider</view>
+      <slider name="slider" show-value></slider>
+    </view>
+
+    <view class="section">
+      <view class="section__title section_title_input">input</view>
+      <input name="input" placeholder="please input here" />
+    </view>
+    <view class="section section_gap">
+      <view class="section__title">radio</view>
+      <radio-group class="vertical" name="radio-group">
+        <label>
+          <radio value="radio1" />radio1</label>
+        <label>
+          <radio value="radio2" />radio2</label>
+      </radio-group>
+    </view>
+    <view class="section section_gap">
+      <view class="section__title">checkbox</view>
+      <checkbox-group class="vertical" name="checkbox">
+        <label>
+          <checkbox value="checkbox1" />checkbox1
+        </label>
+        <label>
+          <checkbox value="checkbox2" />checkbox2</label>
+        <label>
+          <checkbox value="checkbox3" />checkbox3</label>
+        <label>
+          <checkbox value="checkbox4" />checkbox4</label>
+      </checkbox-group>
+    </view>
+    <view class="btn-area">
+      <button formType="submit">Submit</button>
+      <button formType="reset">Reset</button>
+    </view>
+  </form>
+</view>

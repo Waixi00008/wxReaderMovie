@@ -1,0 +1,10 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+  <image class="user-avatar" src="../../images/avatar/4.png"></image>
+  <text class="user-nickName">Hello,小兵</text>
+  <view class="motto-container" bindtap="onTap">
+    <text class="motto">开启小程序之旅</text>
+  </view>
+  <!-- <open-data type="userCity" lang="zh_CN"></open-data>
+  <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">授权登录</button> -->
+</view>

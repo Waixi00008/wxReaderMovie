@@ -1,0 +1,29 @@
+<!--pages/posts/post.wxml-->
+<import src="post-item/post-item-template.wxml" />
+
+<view>
+  <swiper 
+    indicator-dots="true" 
+    indicator-active-color='orange' 
+    autoplay="true" 
+    circular="true" 
+    interval="5000" 
+    style="width:100%;height:600rpx;"
+    catchtap='onSwiperTap'
+  >
+    <swiper-item>
+      <image src="/images/wx.png" style="width:100%;height:600rpx;" data-postid="1"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/iqiyi.png" style="width:100%;height:600rpx;" data-postid="2"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/vr.png" style="width:100%;height:600rpx;" data-postid="3"></image>
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{postList}}" wx:for-item="item" wx:key="index">
+    <view catchtap="onPostTap" data-postid="{{item.postId}}">
+      <template is="posts" data="{{...item}}"/>
+    </view>
+  </block>
+</view>

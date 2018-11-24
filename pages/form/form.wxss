@@ -1,0 +1,55 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+
+.page_hd {
+  margin: 40rpx auto 20rpx;
+  text-align: center;
+}
+
+.page_title {
+  color: #dedede;
+}
+
+.hr {
+  margin-top: 20rpx;
+  width: 200rpx;
+  height: 0;
+  border: 1px solid #dedede;
+}
+
+.section {
+  margin-bottom: 20rpx;
+}
+
+.section .section_title_input {
+  margin-left: 20rpx;
+}
+
+.section input {
+  background-color: #fff;
+  padding: 10rpx 20rpx;
+}
+
+.section_gap {
+  margin-left: 20rpx;
+}
+
+.section__title {
+  margin-bottom: 10rpx;
+  color: #666;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-area button {
+  margin-top: 20rpx;
+}

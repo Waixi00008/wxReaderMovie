@@ -1,0 +1,121 @@
+<import src="../stars/stars-template.wxml" />
+<view class="movie-detail-container">
+  <image class="movie-detail-cover" mode="aspectFill" src="{{movie.movieImg}}" data-url="{{movie.movieImg}}" catchtap="onPreviewImage"></image>
+  <view class="movie-cover-hover">
+    <text class="main-title">{{movie.title}}</text>
+    <text class="sub-title">{{movie.countries}} · {{movie.year}}</text>
+    <view class="like">
+      <text class="highlight-font">{{movie.collect_count}}</text>
+      <text class="plain-font">人喜欢</text>
+      <text class="highlight-font">{{movie.comments_count}}</text>
+      <text class="plain-font">条评论</text>
+    </view>
+  </view>
+  <image class="movie-detail-image" src="{{movie.movieImg}}" data-url="{{movie.movieImg}}" catchtap="onPreviewImage"></image>
+  <view class="summary">
+    <view class="original-title">
+      <text>{{movie.original_title}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">评分</text>
+      <template is="starsTemplate" data="{{stars:movie.stars, score:movie.score}}"/>
+    </view>
+    <view class="flex-row">
+      <text class="mark">导演</text>
+      <text>{{movie.directors}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">影人</text>
+      <text>{{movie.casts}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">类型</text>
+      <text>{{movie.genres}}</text>
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class="synopsis">
+    <text class="synopsis-font">剧情简介</text>
+    <text class="synopsis-content">
+      {{movie.summary}}
+    </text>
+  </view>
+  <view class="hr"></view>
+  <view class="cast">
+    <text class="cast-font">影人</text>
+    <scroll-view class="cast-imgs" scroll-x="true" style="width:100%">
+      <block wx:for="{{movie.castsInfo}}" wx:for-item="item" wx:key="index">
+        <view class="cast-container">
+          <image class="cast-img" src="{{item.avatar}}"></image>
+          <text class="cast-name">{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+
+
+<!-- <view class="movie-detail-container">
+  <image class="movie-detail-cover" mode="aspectFill" src="/image2/cover.jpg"></image>
+  <view class="movie-cover-hover">
+    <text class="main-title">神奇动物在哪里</text>
+    <text class="sub-title">英国 · 2016</text>
+    <view class="like">
+      <text class="highlight-font">35726</text>
+      <text class="plain-font">人喜欢</text>
+      <text class="highlight-font">3168</text>
+      <text class="plain-font">条评论</text>
+    </view>
+  </view>
+  <image class="movie-detail-image" src="/image2/cover.jpg"></image>
+  <view class="summary">
+    <view class="original-title">  
+      <text>Fantastic Beasts and Where to Find Them</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">评分</text>
+      <text>8.1</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">导演</text>
+      <text>大卫·叶茨</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">影人</text>
+      <text>埃迪·雷德梅恩 / 凯瑟琳·沃特斯顿 / 丹·福勒 / 艾莉森·萨多尔</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">类型</text>
+      <text>剧情、奇幻、冒险</text>
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class="synopsis">
+    <text class="synopsis-font">剧情简介</text>
+    <text class="synopsis-content">
+      故事发生在1926年的纽约，彼时，麻鸡们对魔法师的抵制达到了最高峰，由玛丽露（萨曼莎·莫顿 Samantha Morton 饰）所领导的反魔法组织活动频繁。与此同时，街头巷尾之中时时发生的种种灾难意外让魔法世界的存在离暴露仅有一线之隔，整个魔法部陷入了空前紧张的气氛之中。\n就在这个节骨眼上，环游世界进行着研究神奇魔法动物之行动的魔法动物学家纽特（埃迪·雷德梅恩 Eddie Redmayne 饰）抵达了纽约，他随身携带的魔法手提箱里，装着几十种他一路营救的魔法动物们，而他的一举一动，均处于隶属于魔法部的前傲罗蒂娜（凯瑟琳·沃特森 Katherine Waterston 饰）的监视之下。一场意外中，麻鸡雅各布（丹·福格勒 Dan Fogler 饰）误拿了纽特的手提箱，并且放出了藏在箱子里的魔法动物，为此，纽特、蒂娜、雅各布和蒂娜的妹妹奎妮（艾莉森·苏朵儿 Alison Sudol 饰）不得不踏上了寻找魔法动物的旅途。
+    </text>
+  </view>
+  <view class="hr"></view>
+  <view class="cast">
+    <text class="cast-font">影人</text>
+    <scroll-view class="cast-imgs" scroll-x="true" style="width:100%">
+      <view class="cast-container">
+        <image class="cast-img" src="/image2/1.jpg"></image>
+        <text class="cast-name">埃迪·雷德梅恩</text>
+      </view>
+      <view class="cast-container">
+        <image class="cast-img" src="/image2/2.jpg"></image>
+        <text class="cast-name">凯瑟琳·沃特斯顿</text>
+      </view>
+      <view class="cast-container">
+        <image class="cast-img" src="/image2/3.jpg"></image>
+        <text class="cast-name">丹·福勒</text>
+      </view>
+      <view class="cast-container">
+        <image class="cast-img" src="/image2/4.jpg"></image>
+        <text class="cast-name">艾莉森·萨多尔</text>
+      </view>
+    </scroll-view>
+  </view>
+</view> -->
