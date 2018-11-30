@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/welcome/welcome",
+    "pages/posts/post",
     "pages/movies/movies",
+    "pages/welcome/welcome",
     "pages/movies/movie-detail/movie-detail",
     "pages/map/map",
     "pages/movies/more-movie/more-movie",
-    "pages/posts/post",
     "pages/posts/post-detail/post-detail",
     "pages/form/form"
   ],
@@ -29,5 +29,8 @@
         "selectedIconPath": "images/tab/dianying_hl.png"
       }
     ]
-  }
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ]
 }

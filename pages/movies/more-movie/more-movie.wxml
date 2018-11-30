@@ -1,6 +1,3 @@
-<!--pages/movies/more-movie/more-movie.wxml-->
-<import src="../movie-grid/movie-grid-template.wxml" />
 <view>
-  <template is="movieGridTemplate" data="{{movies}}"/>
-  <!-- <template is="movieGridTemplate"/> -->
+  <v-movie-grid movies="{{movies}}"/>
 </view>

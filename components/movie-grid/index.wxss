@@ -1,0 +1,9 @@
+.movie-grid-container{
+  height: 1300rpx;
+  margin:40rpx 0 40rpx 6rpx;
+}
+
+.single-view-container {
+  float: left;
+  margin: 0 22rpx 20rpx;
+}

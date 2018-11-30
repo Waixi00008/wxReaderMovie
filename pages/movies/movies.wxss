@@ -1,7 +1,3 @@
-/* pages/movies/movies.wxss */
-@import "movie-list/movie-list-template.wxss";
-@import "movie-grid/movie-grid-template.wxss";
-
 page {
   background-color: #f2f2f2;
 }

@@ -1,0 +1,16 @@
+<view class="movie-list-container">
+  <view class="movie-list-header">
+    <view>
+      <text class="slogan">{{list.categoryTitle}}</text>
+    </view>
+    <view class="more" catchtap='onMoreTap' data-category="{{list.categoryTitle}}">
+      <text class="more-text">更多</text>
+      <image class="more-img" src="/images/icon/arrow-right.png"></image>
+    </view>
+  </view>
+  <view class="movies-container">
+    <block wx:for="{{list.movies}}" wx:for-item="movie" wx:key="index">
+      <v-movie list="{{movie}}"/>
+    </block>
+  </view>
+</view>

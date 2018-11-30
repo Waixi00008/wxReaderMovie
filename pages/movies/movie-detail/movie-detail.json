@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "电影详情"
+  "navigationBarTitleText": "电影详情",
+  "usingComponents": {
+    "v-stars": "/components/stars/index"
+  }
 }

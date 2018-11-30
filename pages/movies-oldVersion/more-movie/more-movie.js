@@ -76,6 +76,13 @@ Page({
     wx.hideNavigationBarLoading()
     wx.stopPullDownRefresh();
   },
+  //点击电影，跳转到详情
+  onMovieTap: function (e) {
+    const movieId = e.currentTarget.dataset.movieid
+    wx.navigateTo({
+      url: '../movie-detail/movie-detail?id=' + movieId
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -111,6 +118,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    console.log("dataUrl",this.data.dataUrl)
     var refreshUrl = this.data.dataUrl +
       "?star=0&count=20";
     this.setData({

@@ -1,3 +1,4 @@
+<import src="../stars/stars-template.wxml" />
 <view class="movie-detail-container">
   <image class="movie-detail-cover" mode="aspectFill" src="{{movie.movieImg}}" data-url="{{movie.movieImg}}" catchtap="onPreviewImage"></image>
   <view class="movie-cover-hover">
@@ -17,7 +18,7 @@
     </view>
     <view class="flex-row">
       <text class="mark">评分</text>
-      <v-stars stars="{{movie.stars}}" score="{{movie.average}}"/>
+      <template is="starsTemplate" data="{{stars:movie.stars, score:movie.score}}"/>
     </view>
     <view class="flex-row">
       <text class="mark">导演</text>

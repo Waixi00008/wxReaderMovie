@@ -1,0 +1,7 @@
+<view class="movie-grid-container">
+  <block wx:for="{{movies}}" wx:for-item="movie" wx:key="index">
+    <view class="single-view-container" catchtap='onMovieTap' data-movieid = "{{list.movieId}}">
+      <v-movie list="{{movie}}"/>
+    </view>
+  </block>
+</view>

@@ -1,6 +1,8 @@
 // pages/posts/post-detail/post-detail.js
 const postsData = require('../../../data/posts-data.js')
 const app = getApp()
+//替换wx.playBackgroundAudio接口
+const backgroundAudioManager = wx.getBackgroundAudioManager()
 Page({
 
   /**
@@ -28,10 +30,11 @@ Page({
       postid,
       postsCollected,
       isCollected: currentCollected,
-      isPlaying
+      isPlaying:false
     })
     
-    //音乐播放监听事件
+    
+    
     wx.onBackgroundAudioPlay(() => {
       this.setData({
         isPlaying:true
@@ -39,7 +42,6 @@ Page({
       app.globalData.g_isPlayingMusic = true
       app.globalData.g_currentPostId = this.data.postid
     })
-    //音乐暂停监听事件
     wx.onBackgroundAudioPause(() => {
       this.setData({
         isPlaying: false
@@ -47,7 +49,6 @@ Page({
       app.globalData.g_isPlayingMusic = false
       app.globalData.g_currentPostId = this.data.postid
     })
-
     wx.onBackgroundAudioStop(() => {
       this.setData({
         isPlaying: false
@@ -55,20 +56,61 @@ Page({
       app.globalData.g_isPlayingMusic = false
       app.globalData.g_currentPostId = this.data.postid
     })
+    // //音乐播放监听事件
+    // backgroundAudioManager.play(() => {
+    //   this.setData({
+    //     isPlaying: true
+    //   })
+    //   app.globalData.g_isPlayingMusic = true
+    //   app.globalData.g_currentPostId = this.data.postid
+    // })
+    // //音乐暂停监听事件
+    // backgroundAudioManager.pause(() => {
+    //   this.setData({
+    //     isPlaying: false
+    //   })
+    //   app.globalData.g_isPlayingMusic = false
+    //   app.globalData.g_currentPostId = this.data.postid
+    // })
+    // backgroundAudioManager.stop(() => {
+    //   this.setData({
+    //     isPlaying: false
+    //   })
+    //   app.globalData.g_isPlayingMusic = false
+    //   app.globalData.g_currentPostId = this.data.postid
+    // })
+    
     
   },
   //播放音乐
   onPlayingMusic:function() {
     const { dataUrl, title, coverImgUrl } = postsData.postList[this.data.postid].music
+    
     if (this.data.isPlaying) {
       wx.stopBackgroundAudio()
     }else {
       wx.playBackgroundAudio({
         dataUrl,
         title,
-        coverImgUrl
+        coverImgUrl,
+        success:(res) => {
+          //如果无法播放，播放源有问题，qq音乐播放地址是动态变化的，修改播放源
+          console.log(res)
+        },
+        fail:() => {
+          console.log("播放失败")
+        }
       })
     }
+
+    // if (this.data.isPlaying) {
+    //   backgroundAudioManager.stop()
+    // } else {
+    //   backgroundAudioManager.title = title
+    //   backgroundAudioManager.coverImgUrl = coverImgUrl
+    //   // 设置了 src 之后会自动播放
+    //   backgroundAudioManager.src = dataUrl
+    // }
     this.setData({
       isPlaying:!this.data.isPlaying
     })

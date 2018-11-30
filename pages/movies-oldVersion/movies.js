@@ -46,6 +46,12 @@ Page({
     const searchUrl = app.globalData.doubanBaseUrl + "/v2/movie/search?q=" + event.detail.value
     this.getMovieListData(searchUrl, "searchResult", "")
   },
+  onMoreTap:function(event) {
+    const category = event.currentTarget.dataset.category
+    wx.navigateTo({
+      url: 'more-movie/more-movie?category=' + category,
+    })
+  },
   getMovieListData: function (url, settedKey, categoryTitle) {
     utils.http(url, this.processDoubanData, {settedKey, categoryTitle})
     
@@ -85,6 +91,13 @@ Page({
       movies,
     }
     this.setData(movieData)
+  },
+  //点击电影，跳转到详情
+  onMovieTap:function(e) {
+    const movieId = e.currentTarget.dataset.movieid
+    wx.navigateTo({
+      url: 'movie-detail/movie-detail?id=' + movieId
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -18,7 +18,7 @@ const local_database = [
     这意味着您可以更新样式表文档中的CSS变量，内联样式属性和SVG表示属性，或者选择使用JavaScript动态操作它们。对于 CSS自定义属性的修改，会立马传递到使用到他的地方，而预处理器则无法完成这种行为，因为他们是提前已经编译好了的！
     这并不是说你需要在一个或另一个之间做出选择：没有什么能阻止你利用CSS和预处理器变量一起工作的超能力。`,
     music:{
-      dataUrl: 'http://112.17.5.27/amobile.music.tc.qq.com/C400004Mkw5K1oI9K9.m4a?guid=5784515480&vkey=D46CB5772D774C3F3E1D1D88B28C598B2FF63EEEE3ABEE4945FC025E4B6E959B513F23B18DF70A9CA6D86339273FF18E6AE1CFE01BA3D1EB&uin=0&fromtag=66',
+      dataUrl: 'http://111.1.62.84/files/22440000058C1221/isure.stream.qqmusic.qq.com/C400004Mkw5K1oI9K9.m4a',
       title: '佛系少女',
       coverImgUrl: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001CrpRT25yAN5.jpg?max_age=2592000'
     },
@@ -37,7 +37,7 @@ const local_database = [
     dataTime: '24time',
     detail: '并可以在手机上体验该小程序的实际效果。',
     music: {
-      dataUrl: 'http://112.17.5.20/amobile.music.tc.qq.com/C4000045RzZ24AiYP4.m4a?guid=5784515480&vkey=C97DF3D506D0EB36F6820FFD9B6ACB6C1B213EC708C01730928151D933A386FAFA9A038810EB26904AD06BB734AF4256CF0B72D7692121EA&uin=0&fromtag=66',
+      dataUrl: 'http://111.1.62.84/files/22440000058C1221/isure.stream.qqmusic.qq.com/C400004Mkw5K1oI9K9.m4a',
       title: '世界第一等',
       coverImgUrl: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000003V9RQC25xddw.jpg?max_age=2592000'
     },
@@ -57,7 +57,7 @@ const local_database = [
     dataTime: '24time',
     detail: '并可以在手机上体验该小程序的实际效果。',
     music: {
-      dataUrl: 'http://112.17.5.20/amobile.music.tc.qq.com/C400001KxARP2Ij3hH.m4a?guid=5784515480&vkey=CEECF5D00028D62FEA250727776D0959B8AA854D538F0E5AA5F335270FA42E40DFCCEFD1C158CE1BA0AA8296ACBD235180A4191EB722FDEF&uin=0&fromtag=66',
+      dataUrl: 'http://111.1.62.84/files/22440000058C1221/isure.stream.qqmusic.qq.com/C400004Mkw5K1oI9K9.m4a',
       title: '阿刁',
       coverImgUrl: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000001Qgi2X1alT0s.jpg?max_age=2592000'
     },
@@ -77,7 +77,7 @@ const local_database = [
     dataTime: '24time',
     detail: '并可以在手机上体验该小程序的实际效果。',
     music: {
-      dataUrl: 'http://112.17.5.20/amobile.music.tc.qq.com/C4000012wpTL1jLNhJ.m4a?guid=5784515480&vkey=54A75AC7513E7940F4DF90BC6E4C12009B162C1A6E7F5339FB91027864A27A6FF5D3991348D312635FFC1D1B6F6C19F8E3AA207CB8B0D750&uin=0&fromtag=66',
+      dataUrl: 'http://111.1.62.84/files/22440000058C1221/isure.stream.qqmusic.qq.com/C400004Mkw5K1oI9K9.m4a',
       title: '成全',
       coverImgUrl: 'https://y.gtimg.cn/music/photo_new/T002R300x300M000002LSGV30Vhra4.jpg?max_age=2592000'
     },
